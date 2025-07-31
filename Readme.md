@@ -124,6 +124,15 @@ Start the server:
 - **Route:** `/register-event`
 - **Description:** Registers a user for a specific event.
 
+####  Request Body:
+```json
+{ 
+  "name": "Deep",
+  "email": "test@example.com",
+  "eventId": "replace-with-event-id"
+}
+```
+
 ### 4. Cancel Registration
 - **Method:** `DELETE`
 - **Route:** `/cancel-event`
@@ -132,7 +141,7 @@ Start the server:
 ####  Request Body:
 ```json
 {
-  "email": "deep@example.com",
+  "email": "test@example.com",
   "eventId": "replace-with-event-id"
 }
 ```
