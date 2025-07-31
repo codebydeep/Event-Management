@@ -89,3 +89,61 @@ npx prisma migrate dev
 Start the server:
 ```
 
+
+## 📮 API Endpoints
+```
+`http://localhost:3000/events/`Routes
+```
+---
+
+### 1. Create Event
+
+- **Method:** `POST`  
+- **Route:** `/create-event`  
+- **Description:** Creates a new event with title, dateTime, location, and capacity.
+
+#### 📤 Request Body:
+```json
+{
+  "title": "Web dev Bootcamp",
+  "dateTime": "2025-08-15T10:00:00.000Z",
+  "location": "Mumbai",
+  "capacity": 100
+}
+```
+
+### 2. Get All Events
+
+- **Method:** `GET`  
+- **Route:** `/get-events`  
+- **Description:** Get all the Events.
+
+#### 3. Register for Event
+
+- **Method:** `POST`
+- **Route:** `/register-event`
+- **Description:** Registers a user for a specific event.
+
+### 4. Cancel Registration
+- **Method:** `DELETE`
+- **Route:** `/cancel-event`
+- **Description:** Cancels a user registration for an event.
+
+####  Request Body:
+```json
+{
+  "email": "deep@example.com",
+  "eventId": "replace-with-event-id"
+}
+```
+
+### 5. List of Upcoming Events
+- **Method:** `GET`
+- **Route:** `/get-upcoming-events`
+- **Description:** Returns all future events sorted by date and location.
+
+
+### 6. Event Stats
+- *Method:* `GET`
+- *Route:* `/stats/:eventId`
+- *Description:* Returns stats for a specific event
